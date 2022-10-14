@@ -7,14 +7,14 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "book";//여기
-const description = "hihi";//여기
-const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically//여기
+const namePrefix = "Wekid world";
+const description = "we are kid!";
+const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,//여기
-    layersOrder: [//여기
+    growEditionSizeTo: 20,
+    layersOrder: [
       { name: "Background" },
       { name: "Eyeball" },
       { name: "Eye color" },
@@ -26,18 +26,18 @@ const layerConfigurations = [
   },
 ];
 
-const shuffleLayerConfigurations = true;//번호 섞음 1~10하나 11~20하나 일케 안나오게
+const shuffleLayerConfigurations = true; //번호 섞음 1~10하나 11~20하나 일케 안 나오게
 
 const debugLogs = false;
 
-const format = {//여기 사이즈 조절
+const format = {
   width: 512,
   height: 512,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://silverbook.xyz", // 여기 Replace with your website or remove this line if you do not have one.
+  external_url: "https://wekid.xyz", // 여기 Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -48,12 +48,12 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'dhdh';//여기
-const CONTRACT_SYMBOL = 'dh';//여기
+const CONTRACT_NAME = 'Wekid world';//여기
+const CONTRACT_SYMBOL = 'wekid';//여기
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting //트루로 하면 나중에 리빌
 const OWNER_ADDRESS = '0x5aaa58dc49B0aC91B2122AE96f0D2BAbc1B7Eb1a';//내지갑주소
 const TREASURY_ADDRESS = '0x5aaa58dc49B0aC91B2122AE96f0D2BAbc1B7Eb1a';//출금될 지갑 주소
-const MAX_SUPPLY = 5; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED! //최대 민팅할 NFT 개수
+const MAX_SUPPLY = 20; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED! //최대 민팅할 NFT 개수
 const MINT_PRICE = 0.001; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
@@ -62,19 +62,19 @@ const PUBLIC_MINT_START_DATE = "2022-10-20T11:30:48+00:00"; // This is required.
 //부가적으로 설정하는 부분
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = "2022-10-10T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00 
-const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x5aaa58dc49B0aC91B2122AE96f0D2BAbc1B7Eb1a"; // Address that will receive the royalty
+const ROYALTY_SHARE = 2000; // Percentage of the token price that goes to the royalty address. 100 bps = 1% //이부분 안됨
+const ROYALTY_ADDRESS = "0x5aaa58dc49B0aC91B2122AE96f0D2BAbc1B7Eb1a"; // Address that will receive the royalty //이부분 안됨
 const BASE_URI = null; // only update if you want to manually set the base uri //리빌하고 싶으면 널했다가 나중에 입력
-const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri //리빌하고 싶으면 입력
+const PREREVEAL_TOKEN_URI = "https://ipfs.io/ipfs/bafybeid7dmhp6qwusps2opfq3plhffwwb6kybms4dkbsp6mc7d5btu44ui"; // only update if you want to manually set the prereveal token uri //리빌하고 싶으면 입력
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses //주소들 리스트로 쭉 넣음 "", "", ""일케
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it //쓰던 컨트랙트 있으면
+let CONTRACT_ADDRESS = "0x1211181e7B4BcB407466b07D41c5298D48241EdA"; // If you want to manually include it //쓰던 컨트랙트 있으면
 
 // Generic Metadata is optional if you want to reveal your NFTs //리빌할거면 하기 리빌 전 내용들
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future //트루하면 리빌하는거
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say. // 여기 설명 바꾸기
+const GENERIC_DESCRIPTION = "book"; // Replace with what you want the generic descriptions to say. // 여기 설명 바꾸기
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeid7dmhp6qwusps2opfq3plhffwwb6kybms4dkbsp6mc7d5btu44ui"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
